@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="adminLayout">
+<head>
+
+<title>Product list</title>
+</head>
+<body>
+	<div layout:fragment="content">
+
+		<div class="w-50 container">
+			<h1 class="mt-4">Update product</h1>
+			<form class="mt-3" th:action="@{/admin/saveProduct}"
+				th:object="${product}" method="POST">
+				<input type="hidden" th:field="*{id}" />
+				<div class="form-group">
+					<label for="exampleInputEmail1">Product name</label> <input type="text"
+						class="form-control" placeholder="Enter product name"
+						th:field="*{name}">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Product price(₺)</label> <input
+						type="text" class="form-control"
+						placeholder="Enter product price" th:field="*{price}">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Product stock</label> <input
+						type="text" class="form-control"
+						placeholder="Enter product stock" th:field="*{stock}">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Update</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

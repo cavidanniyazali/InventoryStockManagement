@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="employeeLayout">
+
+<head>
+<title>User Home</title>
+</head>
+<body>
+	<div layout:fragment="content">
+<!-- 		<p> -->
+<!-- 			Welcome <span sec:authentication="principal.username">User</span> -->
+<!-- 		</p> -->
+		<h3>Welcome to the Sales Representative Panel</h3>
+		<h5>What You Can Do From This Panel:</h5>
+		<ul>
+		<li>Product Sale</li>
+		<li>Bill Creation</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
